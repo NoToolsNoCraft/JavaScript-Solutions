@@ -1,0 +1,25 @@
+Here is an example of how to manage randomly shuffling items that are updated in the array
+This was used in my Console.log related Quiz app. You may check out the whole source code here:
+https://github.com/NoToolsNoCraft/Console.log-Test-Apps/blob/main/Console.Log%20Quiz%20App/ConsoleLogQuizAppV2.html
+====================================================================================================================
+
+let tasks = [
+            {
+                question: "console.log('5' + 3)",
+                correctAnswer: "'53'",
+                explanation: "In this case, the + operator is used for string concatenation when one of the operands is a string. JavaScript converts the number 3 to a string and concatenates it with '5', resulting in '53'."
+            },
+            {
+                question: "console.log('5' - 3)",
+                correctAnswer: "2",
+                explanation: "The - operator triggers numeric coercion. JavaScript converts the string '5' to a number and then performs the subtraction operation. Thus, 5 - 3 results in 2."
+            },
+            {
+                question: "console.log(typeof ('5' + 3))",
+                correctAnswer: "string",
+                explanation: "When '5' + 3 is evaluated, it results in '53' (a string). Therefore, typeof ('5' + 3) is 'string'."
+            }
+  ];
+
+// Shuffle the tasks array to randomize the order of tasks
+   tasks = tasks.sort(() => Math.random() - 0.5);
